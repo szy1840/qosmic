@@ -17,8 +17,12 @@ stores. Two layers + a gate.
 ## Fastest path (headless, needs ANTHROPIC_API_KEY in env or .env)
 
 ```bash
-node .claude/skills/qosmic-eval/scripts/score.mjs sample_output/<host>.md artifacts/<host> --panel 3
+node .claude/skills/qosmic-eval/scripts/score.mjs sample_output/<host>.md artifacts/<host> --panel 3 --images
 ```
+
+`--images` renders decision-area crops of the cited screenshots and attaches them
+so the judge verifies **visual** claims (dead "SOLD OUT" button, missing buy box,
+blank tiles) against pixels — not just page text. Omit it for a faster text-only run.
 
 Writes `eval/scorecards/<host>.json` with `composite_score`, `gate_pass`,
 `gate_failures`, the deterministic breakdown, and the judge panel result.

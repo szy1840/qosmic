@@ -47,8 +47,10 @@ npm run crawl -- https://zenrojas.com         # → artifacts/zenrojas.com/
 #    It reads artifacts/, reasons over 5 pillars, writes sample_output/<host>.md.
 
 # 3. Eval (deterministic + LLM judge; reads ANTHROPIC_API_KEY from .env)
-npm run score -- sample_output/zenrojas.com.md artifacts/zenrojas.com --panel 3
+npm run score -- sample_output/zenrojas.com.md artifacts/zenrojas.com --panel 3 --images
 #    → eval/scorecards/zenrojas.com.json
+#    --images attaches decision-area screenshot crops so the judge verifies
+#    VISUAL claims (sold-out button, missing buy box) against pixels, not just text.
 ```
 
 `checks.mjs` runs with no API key. `judge.mjs`/`score.mjs` need a key; the
@@ -56,10 +58,12 @@ npm run score -- sample_output/zenrojas.com.md artifacts/zenrojas.com --panel 3
 
 ## Results (from a real run)
 
+(multimodal run, `--panel 3 --images` — the judge verifies visual claims against pixels)
+
 | Store | Mode | Composite | Grounding | Claim support | Gate |
 |---|---|---|---|---|---|
-| zenrojas.com (uncalibrated) | live | **0.976** | 1.00 | 1.00 | pass |
-| gingerpeople.com (calibration) | wayback* | **0.957** | 1.00 | 1.00 | pass |
+| zenrojas.com (uncalibrated) | live | **0.926** | 1.00 | 0.82 | pass |
+| gingerpeople.com (calibration) | wayback* | **0.969** | 1.00 | 1.00 | pass |
 
 \* `gingerpeople.com` blocks automated browsers (Cloudflare 403/timeout), so the
 crawler fell back to the Internet Archive — a legitimate, citable evidence source

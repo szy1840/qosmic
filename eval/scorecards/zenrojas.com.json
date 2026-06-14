@@ -1,7 +1,7 @@
 {
   "report": "sample_output/zenrojas.com.md",
   "artifacts": "artifacts/zenrojas.com",
-  "composite_score": 0.976,
+  "composite_score": 0.926,
   "gate_pass": true,
   "gate_failures": [],
   "deterministic": {
@@ -29,36 +29,48 @@
   "judge": {
     "model": "claude-opus-4-8",
     "panel_size": 3,
+    "images_attached": 6,
     "judge_scores_5pt": {
-      "evidence_specificity": 5,
-      "insight_quality": 5,
+      "evidence_specificity": 4,
+      "insight_quality": 4,
       "actionability": 5,
-      "anti_genericness": 4.67,
+      "anti_genericness": 4,
       "exec_summary": 5,
       "competitor_quality": 4
     },
-    "judge_score_normalized": 0.956,
+    "judge_score_normalized": 0.866,
     "score_spread": {
       "evidence_specificity": 0,
       "insight_quality": 0,
       "actionability": 0,
-      "anti_genericness": 1,
+      "anti_genericness": 0,
       "exec_summary": 0,
       "competitor_quality": 0
     },
     "high_variance": false,
-    "claim_support_rate": 1,
-    "unsupported_claims": [],
+    "claim_support_rate": 0.818,
+    "unsupported_claims": [
+      {
+        "exp_id": "exp-4b1c8f3e6d27",
+        "claim_supported": false,
+        "note": "'Complete Your Ritual' module with blank images is cited but NOT visible in the provided PDP screenshot (crop ends at 'Why You'll Love It'); the blank-tile claim is unverifiable from evidence. Bundle idea is reasonable but the broken-module premise is unsupported."
+      },
+      {
+        "exp_id": "exp-0c6b3f9a1d82",
+        "claim_supported": false,
+        "note": "Favicon:false is supported by tech_signals, but the 'blank cross-sell tiles' claim cannot be verified from the provided screenshot which doesn't show the module. Half the hypothesis is ungrounded."
+      }
+    ],
     "would_pass_for_merchant_votes": "3/3",
     "top_weaknesses": [
-      "Exec summary says 'no social proof to lean on' but homepage carries three named customer testimonials — slight overstatement of trust gap.",
-      "Several evidence claims rest on a screenshot not provided as text (dead button, blank tiles, 'No reviews yet'), so cannot be independently verified from supplied evidence.",
-      "Benefit-routing and in-stock-landing experiments are partly contingent on restocking, which the report's #1 leak shows is the binding constraint — some downstream tests may be premature.",
-      "Heavy reliance on a screenshot (product-products-unwind.png) for several key claims — reviewer cannot verify pixel content, though textual evidence corroborates stockouts and no-reviews indirectly",
-      "Homepage actually carries customer testimonials, so the 'trust thin everywhere' framing slightly overstates; the gap is specifically on PDPs",
-      "Competitor moves are well-chosen but generic at the row level (subscriptions, reviews, gift kits) — transferable but not deeply differentiated per competitor",
-      "Homepage actually carries three testimonials (Max Wical, Diane Mercado, Mariah Acajabon) that exp-2 and exec summary imply don't exist anywhere—proof exists, it's just not on PDPs; framing slightly overstated.",
-      "AggregateRating schema in exp-8 presupposes reviews that exp-2 has yet to create; sequencing dependency not acknowledged."
+      "The 'Complete Your Ritual' broken-image claim is repeated across two experiments (exp-4b and exp-0c) but is NOT visible in the provided PDP screenshot crop, making it the report's central unverifiable assertion.",
+      "Homepage actually has benefit-segmented sections (Sleep/Immune/Energy/Digestion CTAs visible in screenshot), partially contradicting the 'generic slideshow forces self-sort' framing in exp-3c.",
+      "Some lift figures and the cross-sell module CTR KPI rest on the unverified broken-tiles premise.",
+      "Two experiments (exp-4b1c8f3e6d27 and exp-0c6b3f9a1d82) hinge on a 'Complete Your Ritual' cross-sell module with blank/broken images that is not visible in the cited PDP screenshot crop — the visual claim is unverifiable and likely overstated.",
+      "exp-5a8d2c4e9f17 speculatively links the image-format issue to the unverified blank cross-sell tiles, compounding the weak visual claim.",
+      "Reviews claim is slightly nuanced: homepage carries testimonials, so 'no social proof anywhere' is an overstatement, though PDP-level absence is real.",
+      "Two experiments (exp-4b and exp-0c) rely on a 'Complete Your Ritual' module with blank/broken images that is NOT visible in the provided PDP screenshot crop — the central visual claim is uncorroborated and possibly fabricated.",
+      "Exec summary and exp-2f imply zero social proof anywhere, but the homepage clearly displays three customer testimonials — an inaccuracy the report should have reconciled."
     ]
   }
 }

@@ -57,7 +57,10 @@ reference-free judge, the promotion gate — the agent proposed and I approved.
 - **The eval improved the eval:** the LLM judge flagged that several claims rested
   on screenshots / `tech_signals.json` it was never shown, so it couldn't verify
   them from text. Same-session fix: feed `tech_signals.json` into the judge's
-  evidence. (Full screenshot/multimodal verification is the documented next step.)
+  evidence. Follow-up: added `--images`, which renders decision-area crops of the
+  cited screenshots and attaches them so the judge verifies visual claims against
+  pixels — it immediately caught a blank-render bug in my first crop attempt
+  (`file://` subresources blocked from `about:blank`), fixed via data-URI inlining.
 
 ## Verification (not claimed, run)
 
@@ -88,8 +91,11 @@ problem a CRO audit should itself flag.
 
 ## What I'd do with more time
 
-- Multimodal judge (`--images`): feed cited screenshots so pixel-level claims
-  ("dead SOLD OUT button", "blank cross-sell tiles") are machine-verified, not
-  just text-corroborated.
+- ~~Multimodal judge (`--images`)~~ — **done**: the judge now renders decision-area
+  crops of cited screenshots and verifies visual claims against pixels. Remaining
+  refinement: the crop is the top "decision area", so a visual claim about a module
+  far below the fold (e.g. the blank cross-sell tiles low on a long PDP) shows as
+  *unconfirmed* — correct conservative behavior, but a targeted region crop would
+  confirm it. Multi-crop per long page is the next iteration.
 - Real Lighthouse for the page-speed checks (currently navigation-timing proxies).
 - Wire the nightly fleet cron described in `EVAL_LOOP.md`.

@@ -13,7 +13,7 @@ import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, basename, dirname } from 'node:path';
 
 const [, , reportPath, artifactsDir] = process.argv;
-if (!reportPath) { console.error('usage: node score.mjs <report.md> <artifacts/<host>> [--panel N] [--no-judge]'); process.exit(1); }
+if (!reportPath) { console.error('usage: node score.mjs <report.md> <artifacts/<host>> [--panel N] [--images] [--no-judge]'); process.exit(1); }
 const noJudge = process.argv.includes('--no-judge');
 const here = dirname(new URL(import.meta.url).pathname);
 
@@ -31,6 +31,7 @@ if (!noJudge) {
   const panelArgs = [];
   const pi = process.argv.indexOf('--panel');
   if (pi > -1) panelArgs.push('--panel', process.argv[pi + 1]);
+  if (process.argv.includes('--images')) panelArgs.push('--images');
   judge = runJSON('judge.mjs', [reportPath, artifactsDir, ...panelArgs].filter(Boolean));
   if (judge && judge._error) { console.error('[score] judge unavailable:', judge._error); judge = null; }
 }

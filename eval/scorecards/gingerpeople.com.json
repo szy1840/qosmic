@@ -1,7 +1,7 @@
 {
   "report": "sample_output/gingerpeople.com.md",
   "artifacts": "artifacts/gingerpeople.com",
-  "composite_score": 0.957,
+  "composite_score": 0.969,
   "gate_pass": true,
   "gate_failures": [],
   "deterministic": {
@@ -29,20 +29,21 @@
   "judge": {
     "model": "claude-opus-4-8",
     "panel_size": 3,
+    "images_attached": 6,
     "judge_scores_5pt": {
       "evidence_specificity": 5,
       "insight_quality": 5,
-      "actionability": 4,
-      "anti_genericness": 4.67,
+      "actionability": 4.33,
+      "anti_genericness": 5,
       "exec_summary": 5,
       "competitor_quality": 4
     },
-    "judge_score_normalized": 0.922,
+    "judge_score_normalized": 0.944,
     "score_spread": {
       "evidence_specificity": 0,
       "insight_quality": 0,
-      "actionability": 0,
-      "anti_genericness": 1,
+      "actionability": 1,
+      "anti_genericness": 0,
       "exec_summary": 0,
       "competitor_quality": 0
     },
@@ -51,14 +52,14 @@
     "unsupported_claims": [],
     "would_pass_for_merchant_votes": "3/3",
     "top_weaknesses": [
-      "AOV/retention lift and confidence figures are uncalibrated guesses with no baseline data (acknowledged limitation but still soft)",
-      "Several PDP 'no buy box' claims rest on a captured snapshot that may have truncated dynamic/WooCommerce content rather than proving the live page lacks ATC",
-      "Image-optimization specifics (25 images, 7 missing dims) cited to tech_signals.json which is truncated in evidence, so exact numbers unverifiable",
-      "Some PDP 'no price/ATC' conclusions rest on wayback snapshots and truncated text capture; the live store may render a buy box, so the headline leak could be partly an archival artifact (report acknowledges this but still leads with it strongly).",
-      "Lift/KPI estimates for new-build experiments (samplers, kits, need-finder) are reasonable but speculative; several depend on creating products that may not align with the retailer-routed model the report itself flags.",
-      "tech_signals image evidence is truncated in cited material, so exp-4f6c8b3a1d72's specific counts aren't fully verifiable from provided text.",
-      "Several AOV/retention lift and confidence figures (e.g. +12-20%, 80%) are asserted without baseline data; reasonable but uncalibrated.",
-      "Some experiments (sampler, kit, subscribe) rely on inferred gaps about separate selling that aren't directly verifiable from captured evidence, given the PDP didn't even show pricing/cart state."
+      "Soother PDP screenshot shows a 'Sorry, something went wrong' error message where a transaction module likely belongs — the report frames buy-box absence as purely a content gap and misses this as possible evidence the WooCommerce buy module is broken site-wide (same root cause as the cart shortcode), which would sharpen exp-a1c7f0e94b22 and the diagnosis.",
+      "AOV/retention experiments (sampler, kits, subscribe, routine) rest on the catalog but are partly speculative product-creation bets rather than tested-from-evidence gaps; lift/confidence figures are plausible but uncalibrated.",
+      "Several decision rules are slightly soft ('improves without hurting...') without explicit magnitude thresholds or sample/duration guardrails.",
+      "Several AOV/retention experiments (sampler, kit, subscribe) are reasonable but lean on inference rather than directly evidenced leaks; lift figures are unverifiable estimates.",
+      "Some uncertainty about whether the store transacts directly (WooCommerce shortcode suggests it does, but PDPs show no buy box even in working captures) — the report hedges but never fully resolves the retailer-routed vs. direct-sell question.",
+      "Competitor 'pattern to adapt' rows are solid but a couple (e.g., Chimes flavor sampler) are slightly generic restatements of the proposed experiments.",
+      "Site appears to be a brand/retailer-routed presence (no transactional buy box anywhere, WooCommerce cart likely deprecated); several conversion/AOV/retention experiments assume direct e-commerce that may not exist, making lift estimates and 'ship a sampler PDP' steps potentially infeasible",
+      "Lift/confidence figures are not strongly justified per-experiment; KPIs like 60-day repeat rate require direct-commerce data that the brand may not capture"
     ]
   }
 }

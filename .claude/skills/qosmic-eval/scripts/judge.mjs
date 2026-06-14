@@ -17,8 +17,10 @@ import { join } from 'node:path';
 const [, , reportPath, artifactsDir] = process.argv;
 const panelIdx = process.argv.indexOf('--panel');
 const PANEL = panelIdx > -1 ? +process.argv[panelIdx + 1] : 3;
+const USE_IMAGES = process.argv.includes('--images');
+const MAX_IMAGES = 6;
 const MODEL = process.env.JUDGE_MODEL || 'claude-opus-4-8';
-if (!reportPath) { console.error('usage: node judge.mjs <report.md> <artifacts/<host>> [--panel N]'); process.exit(1); }
+if (!reportPath) { console.error('usage: node judge.mjs <report.md> <artifacts/<host>> [--panel N] [--images]'); process.exit(1); }
 
 // --- API key (handles ".env" with "ANTHROPIC_API_KEY = ..." spacing) --------
 function apiKey() {
@@ -52,7 +54,46 @@ if (artifactsDir && existsSync(join(artifactsDir, 'manifest.json'))) {
   if (existsSync(tsPath)) evidence += `\n\n### EVIDENCE [tech_signals.json]\n${readFileSync(tsPath, 'utf8').slice(0, 3000)}`;
 }
 
-const RUBRIC = `You are a strict, reference-free evaluator of e-commerce CRO audit reports produced by an automated audit agent. You do NOT have a golden answer — judge quality on its own terms and against the EVIDENCE provided (extracted page text from the crawl the report cites).
+// --- multimodal: attach cited screenshots so the judge verifies VISUAL claims
+// (dead "SOLD OUT" button, missing buy box, blank tiles) against pixels, not just
+// text. Full-page PNGs are huge and the API squishes a 14000px-tall image to
+// nothing, so we downscale + clip to the decision area (top ~2600px) as compact
+// JPEGs via Playwright — no new deps, stays under the API's per-image limit.
+let imageBlocks = [];
+async function prepImages() {
+  if (!USE_IMAGES || !artifactsDir || !existsSync(join(artifactsDir, 'manifest.json'))) return;
+  const man = JSON.parse(readFileSync(join(artifactsDir, 'manifest.json'), 'utf8'));
+  const cited = man.surfaces
+    .filter((s) => s.screenshot && existsSync(s.screenshot) && (md.includes(s.id) || (s.url && md.includes(s.url))))
+    .slice(0, MAX_IMAGES);
+  if (!cited.length) return;
+  let chromium;
+  try { ({ chromium } = await import('playwright')); } catch { console.error('[judge] --images needs playwright; skipping images'); return; }
+  const browser = await chromium.launch();
+  const page = await browser.newPage({ viewport: { width: 1100, height: 2000 } });
+  for (const s of cited) {
+    try {
+      const abs = s.screenshot.startsWith('/') ? s.screenshot : join(process.cwd(), s.screenshot);
+      // Inline the PNG as a data-URI (file:// subresources are blocked from an
+      // about:blank document → blank crops), scale to 1100px wide, and wait for
+      // the image to actually decode before screenshotting the top region.
+      const pngB64 = readFileSync(abs).toString('base64');
+      await page.setContent(`<body style="margin:0"><img src="data:image/png;base64,${pngB64}" style="width:1100px;display:block"></body>`);
+      await page.waitForFunction(() => { const i = document.querySelector('img'); return i && i.complete && i.naturalWidth > 0; }, { timeout: 20000 });
+      const buf = await page.screenshot({ type: 'jpeg', quality: 60 });
+      imageBlocks.push({
+        label: s.id,
+        block: { type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: buf.toString('base64') } },
+      });
+    } catch (e) { console.error(`[judge] image prep failed for ${s.id}: ${e.message}`); }
+  }
+  await browser.close();
+  console.error(`[judge] attached ${imageBlocks.length} screenshot(s) for visual verification`);
+}
+await prepImages();
+
+const RUBRIC = `You are a strict, reference-free evaluator of e-commerce CRO audit reports produced by an automated audit agent. You do NOT have a golden answer — judge quality on its own terms and against the EVIDENCE provided: extracted page text + tech signals the report cites${imageBlocks.length ? ', AND the attached screenshots (decision-area crops of the cited pages)' : ''}.
+${imageBlocks.length ? 'For any VISUAL claim (a missing/ambiguous buy box, a dead "SOLD OUT" button, missing reviews, blank/broken image tiles, layout problems), VERIFY it against the attached screenshots — mark claim_supported=false if the screenshot contradicts or does not show what the hypothesis asserts.\n' : ''}
 
 Score each dimension 1-5 (5=excellent):
 - evidence_specificity: does each experiment's hypothesis reference something actually present in the cited evidence? Punish claims not supported by (or contradicting) the evidence.
@@ -90,16 +131,23 @@ const SCHEMA = {
   required: ['scores', 'verifications', 'top_weaknesses', 'would_pass_for_merchant'],
 };
 
+function userContent(i) {
+  const text = `Evaluate this audit report. Judge #${i + 1}.\n\n===== REPORT =====\n${md}\n\n===== CITED EVIDENCE (crawl page text) =====${evidence || '\n(none provided)'}\n\nReturn the JSON scorecard.`;
+  if (!imageBlocks.length) return text;
+  // text first, then each screenshot labelled with the surface id it depicts
+  const content = [{ type: 'text', text }];
+  content.push({ type: 'text', text: '\n===== ATTACHED SCREENSHOTS (decision-area crops) =====' });
+  for (const im of imageBlocks) { content.push({ type: 'text', text: `Screenshot of surface [${im.label}]:` }); content.push(im.block); }
+  return content;
+}
+
 async function judgeOnce(i) {
   const body = {
     model: MODEL,
     max_tokens: 4000,
     output_config: { format: { type: 'json_schema', schema: SCHEMA } },
     system: RUBRIC,
-    messages: [{
-      role: 'user',
-      content: `Evaluate this audit report. Judge #${i + 1}.\n\n===== REPORT =====\n${md}\n\n===== CITED EVIDENCE (crawl page text) =====${evidence || '\n(none provided)'}\n\nReturn the JSON scorecard.`,
-    }],
+    messages: [{ role: 'user', content: userContent(i) }],
   };
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
@@ -140,6 +188,7 @@ const claimSupportRate = verifications.length ? verifications.filter((v) => v.cl
 const out = {
   model: MODEL,
   panel_size: panel.length,
+  images_attached: imageBlocks.length,
   judge_scores_5pt: meanScores,
   judge_score_normalized: Math.round((overall5 / 5) * 1000) / 1000,
   score_spread: spread,
