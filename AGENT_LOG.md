@@ -68,6 +68,24 @@ reference-free judge, the promotion gate — the agent proposed and I approved.
   **0.976**, gingerpeople **0.957**, both gate-pass, 100% grounding, 100% claim
   support. Scorecards in `eval/scorecards/`.
 
+## Live-site reliability note — gingerpeople.com (calibration target)
+
+The assignment's calibration target is unreliable on **two independent axes**,
+both on the store's side — which is the whole reason the crawler needs a fallback.
+Observed states (probed directly):
+
+| When | `/` | `/robots.txt` | What it means |
+|---|---|---|---|
+| During build | 403 Forbidden / timeout | timeout | Cloudflare **bot management** blocks automated clients |
+| 2026-06-14 15:22 PDT | 403 Forbidden (0.1s) | 25s timeout | Bot wall still up |
+| Same time, in a browser | Cloudflare **524** "origin web server timed out" | — | The WordPress **origin is overloaded/down** — even humans can't load it |
+
+So the live store fails for bots (403) *and* intermittently for everyone (524).
+Wayback remained available throughout (snapshot `20260422074251`, status 200), so
+the harness still produces a grounded report. This is exactly the failure mode the
+Wayback fallback exists for — and, ironically, the kind of Performance/reliability
+problem a CRO audit should itself flag.
+
 ## What I'd do with more time
 
 - Multimodal judge (`--images`): feed cited screenshots so pixel-level claims
