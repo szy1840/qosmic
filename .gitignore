@@ -1,0 +1,13 @@
+# Secrets — never commit the API key
+.env
+.env.*
+
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+
+# NOTE: artifacts/ IS committed — the audit reports cite artifact paths under it,
+# and the eval's grounding check resolves those paths. Keeping the evidence in the
+# repo is what makes the reports verifiable. (Screenshots are large but that's the point.)

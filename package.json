@@ -1,0 +1,19 @@
+{
+  "name": "qosmic",
+  "version": "1.0.0",
+  "description": "Qosmic runtime audit harness + self-improving eval system.",
+  "scripts": {
+    "crawl": "node .claude/skills/qosmic-audit/scripts/crawl.mjs",
+    "check": "node .claude/skills/qosmic-eval/scripts/checks.mjs",
+    "judge": "node .claude/skills/qosmic-eval/scripts/judge.mjs",
+    "score": "node .claude/skills/qosmic-eval/scripts/score.mjs",
+    "postinstall": "playwright install chromium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}

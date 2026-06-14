@@ -1,0 +1,525 @@
+{
+  "host": "gingerpeople.com",
+  "mode": "wayback",
+  "snapshot_ts": "20260422074251",
+  "ssl": {
+    "ok": null,
+    "not_assessable": true,
+    "detail": "archived crawl — TLS of live edge not verified; archived URL was HTTPS"
+  },
+  "https_redirect": {
+    "status": null,
+    "ok": null,
+    "not_assessable": true,
+    "detail": "archived crawl — live endpoint not fetched"
+  },
+  "robots": {
+    "status": null,
+    "ok": null,
+    "has_sitemap_directive": false
+  },
+  "sitemap": {
+    "status": null,
+    "ok": null,
+    "url_count": 0
+  },
+  "meta": [
+    {
+      "id": "home-page",
+      "title": "The Ginger People - Ginger and Turmeric Food and Beverages",
+      "description": "Fresh ginger and turmeric products that are non-GMO, vegan, and gluten free. Try GIN GINS®, Ginger Rescue®, Juices & Sushi Ginger today.",
+      "og": true
+    },
+    {
+      "id": "product-products-ginger-soother-turmeric-gingerade",
+      "title": "Ginger Soother® Turmeric Gingerade - The Ginger People US",
+      "description": "An earthy and delicious Turmeric Gingerade tonic that delivers a healthy dose of turmeric.",
+      "og": true
+    },
+    {
+      "id": "product-products-gin-gins-original-ginger-chews",
+      "title": "GIN GINS® Original Ginger Chews - The Ginger People US",
+      "description": "These spicy-sweet, chewy treats are an enjoyable alternative to anti-nausea medicine. Whether you’re treating a belly ache, a bout of nausea or simply indulging yourself, always have these classic, yummy ginger candies in your stash.",
+      "og": true
+    },
+    {
+      "id": "collection-category-brain-memory",
+      "title": "One moment, please...",
+      "description": null,
+      "og": false
+    },
+    {
+      "id": "cart-cart",
+      "title": "Cart - The Ginger People",
+      "description": null,
+      "og": true
+    },
+    {
+      "id": "content-gingerpeople-com-about-ginger-people-html",
+      "title": "Page not found - The Ginger People US",
+      "description": null,
+      "og": true
+    },
+    {
+      "id": "content-our-story",
+      "title": "Our Story - The Ginger People US",
+      "description": "For over 30 years, Bruce and Abbie Leeson have focused their family business around their passion for ginger. Named “Best Product Line” by the National Association of the Specialty Food Trade, The Ginger People offers a product range that honors the authentic, innovative and values-driven fundamentals of their brand.",
+      "og": true
+    },
+    {
+      "id": "content-6-surprising-health-benefits-of-turmeric",
+      "title": "6 Surprising Health Benefits of Turmeric - The Ginger People US",
+      "description": "There are many health benefits of turmeric you may not have heard about. Add a little spice to your life - here are 6 surprising health benefits of turmeric.",
+      "og": true
+    }
+  ],
+  "structured_data": [
+    {
+      "id": "home-page",
+      "jsonld": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "product-products-ginger-soother-turmeric-gingerade",
+      "jsonld": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "product-products-gin-gins-original-ginger-chews",
+      "jsonld": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "collection-category-brain-memory",
+      "jsonld": []
+    },
+    {
+      "id": "cart-cart",
+      "jsonld": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "content-gingerpeople-com-about-ginger-people-html",
+      "jsonld": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "content-our-story",
+      "jsonld": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "content-6-surprising-health-benefits-of-turmeric",
+      "jsonld": [
+        "unknown"
+      ]
+    }
+  ],
+  "favicon": true,
+  "mobile_friendly": {
+    "viewport_meta": true,
+    "mobile_screenshot": "artifacts/gingerpeople.com/screenshots/home-page-mobile.png"
+  },
+  "page_speed": [
+    {
+      "id": "home-page",
+      "timing": {
+        "dcl": 430,
+        "load": 603
+      }
+    },
+    {
+      "id": "product-products-ginger-soother-turmeric-gingerade",
+      "timing": {
+        "dcl": 17463,
+        "load": 0
+      }
+    },
+    {
+      "id": "product-products-gin-gins-original-ginger-chews",
+      "timing": {
+        "dcl": 8852,
+        "load": 9738
+      }
+    },
+    {
+      "id": "collection-category-brain-memory",
+      "timing": {
+        "dcl": 2820,
+        "load": 2821
+      }
+    },
+    {
+      "id": "cart-cart",
+      "timing": {
+        "dcl": 21484,
+        "load": 23626
+      }
+    },
+    {
+      "id": "content-gingerpeople-com-about-ginger-people-html",
+      "timing": {
+        "dcl": 11385,
+        "load": 11385
+      }
+    },
+    {
+      "id": "content-our-story",
+      "timing": {
+        "dcl": 6857,
+        "load": 9665
+      }
+    },
+    {
+      "id": "content-6-surprising-health-benefits-of-turmeric",
+      "timing": {
+        "dcl": 7359,
+        "load": 9109
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "home-page",
+      "count": 23,
+      "missing_dims": 1,
+      "modern_fmt": 0
+    },
+    {
+      "id": "product-products-ginger-soother-turmeric-gingerade",
+      "count": 17,
+      "missing_dims": 4,
+      "modern_fmt": 0
+    },
+    {
+      "id": "product-products-gin-gins-original-ginger-chews",
+      "count": 25,
+      "missing_dims": 7,
+      "modern_fmt": 0
+    },
+    {
+      "id": "collection-category-brain-memory",
+      "count": 0,
+      "missing_dims": 0,
+      "modern_fmt": 0
+    },
+    {
+      "id": "cart-cart",
+      "count": 9,
+      "missing_dims": 8,
+      "modern_fmt": 0
+    },
+    {
+      "id": "content-gingerpeople-com-about-ginger-people-html",
+      "count": 5,
+      "missing_dims": 0,
+      "modern_fmt": 0
+    },
+    {
+      "id": "content-our-story",
+      "count": 10,
+      "missing_dims": 1,
+      "modern_fmt": 0
+    },
+    {
+      "id": "content-6-surprising-health-benefits-of-turmeric",
+      "count": 12,
+      "missing_dims": 1,
+      "modern_fmt": 0
+    }
+  ],
+  "cookie_privacy": {
+    "consent_banner": true,
+    "privacy_link": true
+  },
+  "checkout": {
+    "id": "cart-cart",
+    "kind": "cart",
+    "url": "https://gingerpeople.com/cart",
+    "fetch_url": "https://web.archive.org/web/20260422074251/https://gingerpeople.com/cart",
+    "source": "wayback",
+    "snapshot_ts": "20260422074251",
+    "status": 200,
+    "title": "Cart - The Ginger People",
+    "screenshot": "artifacts/gingerpeople.com/screenshots/cart-cart.png",
+    "mobile_screenshot": null,
+    "html": "artifacts/gingerpeople.com/pages/cart-cart.html",
+    "text": "artifacts/gingerpeople.com/pages/cart-cart.txt",
+    "signals": {
+      "meta_title": "Cart - The Ginger People",
+      "meta_description": null,
+      "og_title": "Cart - The Ginger People",
+      "og_image": null,
+      "twitter_card": "summary_large_image",
+      "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+      "jsonld_types": [
+        "unknown"
+      ],
+      "favicon": true,
+      "img_count": 9,
+      "img_missing_dims": 8,
+      "img_modern_fmt": 0,
+      "has_consent_banner": false,
+      "nav_anchors": [
+        {
+          "href": "https://gingerpeople.com/",
+          "text": "NORTH AMERICA"
+        },
+        {
+          "href": "https://eu.gingerpeople.com/",
+          "text": "EUROPE"
+        },
+        {
+          "href": "https://au.gingerpeople.com/",
+          "text": "AUSTRALIA"
+        },
+        {
+          "href": "https://www.facebook.com/GINGERPEOPLE/",
+          "text": ""
+        },
+        {
+          "href": "https://www.instagram.com/the_ginger_people/",
+          "text": ""
+        },
+        {
+          "href": "https://twitter.com/TheGingerPeople/",
+          "text": ""
+        },
+        {
+          "href": "https://www.pinterest.com/gingerpeople/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/",
+          "text": "NORTH AMERICA"
+        },
+        {
+          "href": "https://eu.gingerpeople.com/",
+          "text": "EUROPE"
+        },
+        {
+          "href": "https://au.gingerpeople.com/",
+          "text": "AUSTRALIA"
+        },
+        {
+          "href": "https://gingerpeople.com/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/all-products/",
+          "text": "PRODUCTS"
+        },
+        {
+          "href": "https://gingerpeople.com/all-products/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/gin-gins/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/ginger-rescue-chewable-ginger-tablets/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/ginger-rescue-ginger-shots/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/ginger-and-turmeric-juice/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/ginger-soother-gingerade/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/turmeric-latte/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/ginger-pantry-baking/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/ginger-pantry-cooking/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/trade/",
+          "text": "TRADE"
+        },
+        {
+          "href": "https://gingerpeople.com/trade#ingredients",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/trade#foodservice",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/trade#retailers",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/trade#distributors",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/trade#salestools",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/cart/#",
+          "text": "ABOUT US"
+        },
+        {
+          "href": "https://gingerpeople.com/our-story/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/our-story/#mission",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/organic-non-gmo-standards/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/faqs/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/recipes/",
+          "text": "RECIPES"
+        },
+        {
+          "href": "https://gingerpeople.com/cart/#",
+          "text": "HEALTH"
+        },
+        {
+          "href": "https://gingerpeople.com/health-blog/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/health-benefits-of-ginger/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/health-benefits-of-turmeric/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/cart/#",
+          "text": "WHERE TO BUY"
+        },
+        {
+          "href": "https://gingerpeople.com/recipes/",
+          "text": "View All Recipes"
+        },
+        {
+          "href": "https://gingerpeople.com/news",
+          "text": "View All Health Articles"
+        },
+        {
+          "href": "https://www.facebook.com/GINGERPEOPLE/",
+          "text": ""
+        },
+        {
+          "href": "https://www.instagram.com/the_ginger_people/",
+          "text": ""
+        },
+        {
+          "href": "https://twitter.com/TheGingerPeople/",
+          "text": ""
+        },
+        {
+          "href": "https://www.pinterest.com/gingerpeople/",
+          "text": ""
+        },
+        {
+          "href": "https://gingerpeople.com/our-story",
+          "text": "Our Story"
+        },
+        {
+          "href": "https://gingerpeople.com/faqs/",
+          "text": "FAQ"
+        },
+        {
+          "href": "https://gingerpeople.com/contact-us/",
+          "text": "Contact Us"
+        },
+        {
+          "href": "https://gingerpeople.com/trade",
+          "text": "Wholesale & Trade"
+        },
+        {
+          "href": "https://gingerpeople.com/privacy-policy/",
+          "text": "Privacy Policy"
+        }
+      ],
+      "nav_timing": {
+        "dcl": 21484,
+        "load": 23626
+      }
+    }
+  },
+  "critical_pages": [
+    {
+      "id": "home-page",
+      "kind": "home",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "product-products-ginger-soother-turmeric-gingerade",
+      "kind": "product",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "product-products-gin-gins-original-ginger-chews",
+      "kind": "product",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "collection-category-brain-memory",
+      "kind": "collection",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "cart-cart",
+      "kind": "cart",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "content-gingerpeople-com-about-ginger-people-html",
+      "kind": "content",
+      "status": 404,
+      "error": null
+    },
+    {
+      "id": "content-our-story",
+      "kind": "content",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "content-6-surprising-health-benefits-of-turmeric",
+      "kind": "content",
+      "status": 200,
+      "error": null
+    }
+  ],
+  "broken_links": [],
+  "notes": "crawl mode=wayback (Wayback snapshot 20260422074251). page_speed timings are navigation-timing proxies, not full Lighthouse runs. Live-only checks (robots, sitemap, https-redirect, broken-links, page-speed) marked not_assessable."
+}

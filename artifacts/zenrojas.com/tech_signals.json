@@ -1,0 +1,468 @@
+{
+  "host": "zenrojas.com",
+  "mode": "live",
+  "snapshot_ts": null,
+  "ssl": {
+    "ok": true,
+    "detail": "homepage HTTPS status 200"
+  },
+  "https_redirect": {
+    "ok": true,
+    "status": 301,
+    "location": "https://zenrojas.com/"
+  },
+  "robots": {
+    "status": 200,
+    "ok": true,
+    "has_sitemap_directive": false
+  },
+  "sitemap": {
+    "status": 200,
+    "ok": true,
+    "url_count": 5
+  },
+  "meta": [
+    {
+      "id": "home-page",
+      "title": "Home Page – Zen Rojas",
+      "description": "100% Organic Loose Leaf tea",
+      "og": true
+    },
+    {
+      "id": "product-products-unwind",
+      "title": "Unwind Organic Tea – Zen Rojas",
+      "description": "Sip, Relax, Restore Take a mindful pause with our Unwind Organic Tea, a calming blend of lemon balm, peppermint, ginger root, licorice root, and bacopa leaves. Naturally caffeine-free and 100% organic, this tea is ethically sourced and crafted to help restore balance in a fast-paced world. Please note: made on equipment that may process nuts and gluten.",
+      "og": true
+    },
+    {
+      "id": "product-products-zen-rojas-mug",
+      "title": "Zen Rojas Mug 11oz",
+      "description": "Sip Your Moment of Calm The Zen Rojas Mug 11oz is thoughtfully designed for daily rituals that feel calm, intentional, and quietly indulgent. Whether you're easing into your morning, unwinding in the evening, or savoring a slow moment in between, this mug adds a sense of warmth and refinement to your routine. Crafted f",
+      "og": true
+    },
+    {
+      "id": "collection-collections-teas",
+      "title": "Teas – Zen Rojas",
+      "description": "Exceptional Aroma. Exceptional Tea. Discover the full Zen Rojas tea collection, crafted from 100% organic, ethically sourced ingredients. From bold black teas to calming herbal blends, each tea is designed to nourish your body, calm your mind, and elevate your daily rituals. Pair with our Zen Rojas Teaware for the full experience",
+      "og": true
+    },
+    {
+      "id": "cart-cart",
+      "title": "Your Shopping Cart – Zen Rojas",
+      "description": null,
+      "og": true
+    },
+    {
+      "id": "content-pages-contactus",
+      "title": "Contact Us – Zen Rojas",
+      "description": "For any questions, comments, or concerns please contact us at contact@zenrojas.com. Please visit our Social media sights and share your experiences! Instagram: Zen Rojas (@zen_rojas) • Instagram photos and videos Facebook: Zen Rojas | Facebook X: Zen Rojas (@ZenRojas0) / X TikTok: Zen Rojas (@zenrojas_) | TikTok",
+      "og": true
+    },
+    {
+      "id": "content-pages-aboutus",
+      "title": "About Us – Zen Rojas",
+      "description": "At Zen Rojas, we believe every sip is a reminder to slow down, breathe deeply, and reconnect with the moment. Our teas are crafted to bring harmony to your day — one mindful cup at a time. Veteran owned and family operated, Zen Rojas was born from a simple truth: calm is something we create. Through years of service and travel, we discovered how deeply nature can restore balance and peace. That experience shaped our mission — to provide organic, intentional blends that nourish both body and mind. Every tea we carry is designed to support your wellness — from grounding greens and soothing herbs to uplifting florals that awaken the senses. At our core, Zen Rojas is more than tea. It’s a ritual. A breath. A return to stillness. Thank you for sharing a cup with us. From our family to yours — peace, gratitude, and good tea. Zen Rojas Proudly Veteran-Owned and family operated | Crafted with Intention | Rooted in Calm",
+      "og": true
+    },
+    {
+      "id": "content-blogs-weekly-blog",
+      "title": "Blogs, Recipes & More! – Zen Rojas",
+      "description": "Fresh perspectives, practical insights, and meaningful conversations. Discover the latest articles from Zen Rojas.",
+      "og": true
+    }
+  ],
+  "structured_data": [
+    {
+      "id": "home-page",
+      "jsonld": []
+    },
+    {
+      "id": "product-products-unwind",
+      "jsonld": []
+    },
+    {
+      "id": "product-products-zen-rojas-mug",
+      "jsonld": []
+    },
+    {
+      "id": "collection-collections-teas",
+      "jsonld": []
+    },
+    {
+      "id": "cart-cart",
+      "jsonld": []
+    },
+    {
+      "id": "content-pages-contactus",
+      "jsonld": []
+    },
+    {
+      "id": "content-pages-aboutus",
+      "jsonld": []
+    },
+    {
+      "id": "content-blogs-weekly-blog",
+      "jsonld": []
+    }
+  ],
+  "favicon": false,
+  "mobile_friendly": {
+    "viewport_meta": true,
+    "mobile_screenshot": "artifacts/zenrojas.com/screenshots/home-page-mobile.png"
+  },
+  "page_speed": [
+    {
+      "id": "home-page",
+      "timing": {
+        "dcl": 288,
+        "load": 701
+      }
+    },
+    {
+      "id": "product-products-unwind",
+      "timing": {
+        "dcl": 239,
+        "load": 506
+      }
+    },
+    {
+      "id": "product-products-zen-rojas-mug",
+      "timing": {
+        "dcl": 246,
+        "load": 740
+      }
+    },
+    {
+      "id": "collection-collections-teas",
+      "timing": {
+        "dcl": 236,
+        "load": 468
+      }
+    },
+    {
+      "id": "cart-cart",
+      "timing": {
+        "dcl": 224,
+        "load": 441
+      }
+    },
+    {
+      "id": "content-pages-contactus",
+      "timing": {
+        "dcl": 194,
+        "load": 434
+      }
+    },
+    {
+      "id": "content-pages-aboutus",
+      "timing": {
+        "dcl": 222,
+        "load": 436
+      }
+    },
+    {
+      "id": "content-blogs-weekly-blog",
+      "timing": {
+        "dcl": 236,
+        "load": 478
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "home-page",
+      "count": 13,
+      "missing_dims": 13,
+      "modern_fmt": 0
+    },
+    {
+      "id": "product-products-unwind",
+      "count": 14,
+      "missing_dims": 14,
+      "modern_fmt": 0
+    },
+    {
+      "id": "product-products-zen-rojas-mug",
+      "count": 9,
+      "missing_dims": 9,
+      "modern_fmt": 0
+    },
+    {
+      "id": "collection-collections-teas",
+      "count": 9,
+      "missing_dims": 9,
+      "modern_fmt": 0
+    },
+    {
+      "id": "cart-cart",
+      "count": 2,
+      "missing_dims": 2,
+      "modern_fmt": 0
+    },
+    {
+      "id": "content-pages-contactus",
+      "count": 1,
+      "missing_dims": 1,
+      "modern_fmt": 0
+    },
+    {
+      "id": "content-pages-aboutus",
+      "count": 1,
+      "missing_dims": 1,
+      "modern_fmt": 0
+    },
+    {
+      "id": "content-blogs-weekly-blog",
+      "count": 7,
+      "missing_dims": 7,
+      "modern_fmt": 0
+    }
+  ],
+  "cookie_privacy": {
+    "consent_banner": true,
+    "privacy_link": true
+  },
+  "checkout": {
+    "id": "cart-cart",
+    "kind": "cart",
+    "url": "https://zenrojas.com/cart",
+    "fetch_url": "https://zenrojas.com/cart",
+    "source": "live",
+    "snapshot_ts": null,
+    "status": 200,
+    "title": "Your Shopping Cart – Zen Rojas",
+    "screenshot": "artifacts/zenrojas.com/screenshots/cart-cart.png",
+    "mobile_screenshot": null,
+    "html": "artifacts/zenrojas.com/pages/cart-cart.html",
+    "text": "artifacts/zenrojas.com/pages/cart-cart.txt",
+    "signals": {
+      "meta_title": "Your Shopping Cart – Zen Rojas",
+      "meta_description": null,
+      "og_title": "Your Shopping Cart",
+      "og_image": "http://zenrojas.com/cdn/shop/files/Logo_1200x1200.png?v=1616214451",
+      "twitter_card": "summary_large_image",
+      "viewport": "width=device-width,initial-scale=1",
+      "jsonld_types": [],
+      "favicon": false,
+      "img_count": 2,
+      "img_missing_dims": 2,
+      "img_modern_fmt": 0,
+      "has_consent_banner": true,
+      "nav_anchors": [
+        {
+          "href": "https://zenrojas.com/cart#MainContent",
+          "text": "Skip to content"
+        },
+        {
+          "href": "https://zenrojas.com/",
+          "text": "HOME"
+        },
+        {
+          "href": "https://zenrojas.com/collections/teas",
+          "text": ""
+        },
+        {
+          "href": "https://zenrojas.com/collections/teaware",
+          "text": ""
+        },
+        {
+          "href": "https://zenrojas.com/collections/gift-cards",
+          "text": ""
+        },
+        {
+          "href": "https://zenrojas.com/pages/contactus",
+          "text": "CONTACT US"
+        },
+        {
+          "href": "https://zenrojas.com/pages/aboutus",
+          "text": "ABOUT US"
+        },
+        {
+          "href": "https://zenrojas.com/customer_authentication/redirect?locale=en&region_country=US",
+          "text": "Log in"
+        },
+        {
+          "href": "https://shopify.com/27573977165/account?locale=en&region_country=US&buyer_flags=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ6ZW4tcm9qYXMubXlzaG9waWZ5LmNvbSIsImZsYWdzIjpbXSwiZXhwIjoxNzgyMDc1MDU1LCJuYmYiOjE3ODE0NzAyNTV9.2esdeB43Wo6IUsfNCXM7b3EGHWj7NdYiMuPC4_o40DA",
+          "text": "Create account"
+        },
+        {
+          "href": "https://zenrojas.com/search",
+          "text": "Search"
+        },
+        {
+          "href": "https://zenrojas.com/blogs/weekly-blog",
+          "text": "Blog"
+        },
+        {
+          "href": "https://zenrojas.com/pages/ambassadorprogram",
+          "text": "Ambassador Program"
+        },
+        {
+          "href": "https://zenrojas.com/pages/faqs",
+          "text": "FAQs"
+        },
+        {
+          "href": "https://zenrojas.com/pages/returnpolicy",
+          "text": "Refund Policy"
+        },
+        {
+          "href": "https://zenrojas.com/pages/privacypolicy",
+          "text": "Privacy Policy"
+        },
+        {
+          "href": "https://zenrojas.com/policies/terms-of-service",
+          "text": "Terms of Service"
+        },
+        {
+          "href": "https://www.facebook.com/zenrojas0",
+          "text": "Facebook"
+        },
+        {
+          "href": "https://twitter.com/ZenRojas0",
+          "text": "Twitter"
+        },
+        {
+          "href": "https://www.instagram.com/zen_rojas/",
+          "text": "Instagram"
+        },
+        {
+          "href": "https://zenrojas.com/",
+          "text": ""
+        },
+        {
+          "href": "https://zenrojas.com/cart",
+          "text": "VIEW CART"
+        },
+        {
+          "href": "https://zenrojas.com/collections/all",
+          "text": "CONTINUE BROWSING HERE"
+        },
+        {
+          "href": "https://zenrojas.com/cart",
+          "text": ""
+        },
+        {
+          "href": "https://zenrojas.com/cart",
+          "text": ""
+        },
+        {
+          "href": "https://zenrojas.com/cart/change?line=1&quantity=0",
+          "text": "Remove"
+        },
+        {
+          "href": "https://zenrojas.com/cart/change?line=1&quantity=0",
+          "text": "Remove"
+        },
+        {
+          "href": "https://zenrojas.com/search",
+          "text": "SEARCH"
+        },
+        {
+          "href": "https://zenrojas.com/blogs/weekly-blog",
+          "text": "BLOG"
+        },
+        {
+          "href": "https://zenrojas.com/pages/ambassadorprogram",
+          "text": "AMBASSADOR PROGRAM"
+        },
+        {
+          "href": "https://zenrojas.com/pages/faqs",
+          "text": "FAQS"
+        },
+        {
+          "href": "https://zenrojas.com/pages/returnpolicy",
+          "text": "REFUND POLICY"
+        },
+        {
+          "href": "https://zenrojas.com/pages/privacypolicy",
+          "text": "PRIVACY POLICY"
+        },
+        {
+          "href": "https://zenrojas.com/policies/terms-of-service",
+          "text": "TERMS OF SERVICE"
+        },
+        {
+          "href": "https://www.facebook.com/zenrojas0",
+          "text": "Facebook"
+        },
+        {
+          "href": "https://twitter.com/ZenRojas0",
+          "text": "Twitter"
+        },
+        {
+          "href": "https://www.instagram.com/zen_rojas/",
+          "text": "Instagram"
+        },
+        {
+          "href": "https://zenrojas.com/",
+          "text": "Zen Rojas"
+        },
+        {
+          "href": "https://www.shopify.com/?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore",
+          "text": "Powered by Shopify"
+        }
+      ],
+      "nav_timing": {
+        "dcl": 224,
+        "load": 441
+      }
+    }
+  },
+  "critical_pages": [
+    {
+      "id": "home-page",
+      "kind": "home",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "product-products-unwind",
+      "kind": "product",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "product-products-zen-rojas-mug",
+      "kind": "product",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "collection-collections-teas",
+      "kind": "collection",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "cart-cart",
+      "kind": "cart",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "content-pages-contactus",
+      "kind": "content",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "content-pages-aboutus",
+      "kind": "content",
+      "status": 200,
+      "error": null
+    },
+    {
+      "id": "content-blogs-weekly-blog",
+      "kind": "content",
+      "status": 200,
+      "error": null
+    }
+  ],
+  "broken_links": [
+    {
+      "url": "https://zenrojas.com/customer_authentication/redirect?locale=en&region_country=US",
+      "status": 406
+    }
+  ],
+  "notes": "crawl mode=live. page_speed timings are navigation-timing proxies, not full Lighthouse runs."
+}

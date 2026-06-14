@@ -1,0 +1,64 @@
+{
+  "report": "sample_output/zenrojas.com.md",
+  "artifacts": "artifacts/zenrojas.com",
+  "composite_score": 0.976,
+  "gate_pass": true,
+  "gate_failures": [],
+  "deterministic": {
+    "score": 1,
+    "critical_count": 0,
+    "grounding_rate": 1,
+    "pillar_counts": {
+      "Conversion": 2,
+      "AOV": 2,
+      "Retention": 2,
+      "Acquisition": 2,
+      "Performance": 2
+    },
+    "dimension_scores": {
+      "schema": 1,
+      "diversity": 1,
+      "grounding": 1,
+      "sanity": 1,
+      "competitors": 1,
+      "technical": 1,
+      "exec": 1
+    },
+    "deficiencies": []
+  },
+  "judge": {
+    "model": "claude-opus-4-8",
+    "panel_size": 3,
+    "judge_scores_5pt": {
+      "evidence_specificity": 5,
+      "insight_quality": 5,
+      "actionability": 5,
+      "anti_genericness": 4.67,
+      "exec_summary": 5,
+      "competitor_quality": 4
+    },
+    "judge_score_normalized": 0.956,
+    "score_spread": {
+      "evidence_specificity": 0,
+      "insight_quality": 0,
+      "actionability": 0,
+      "anti_genericness": 1,
+      "exec_summary": 0,
+      "competitor_quality": 0
+    },
+    "high_variance": false,
+    "claim_support_rate": 1,
+    "unsupported_claims": [],
+    "would_pass_for_merchant_votes": "3/3",
+    "top_weaknesses": [
+      "Exec summary says 'no social proof to lean on' but homepage carries three named customer testimonials — slight overstatement of trust gap.",
+      "Several evidence claims rest on a screenshot not provided as text (dead button, blank tiles, 'No reviews yet'), so cannot be independently verified from supplied evidence.",
+      "Benefit-routing and in-stock-landing experiments are partly contingent on restocking, which the report's #1 leak shows is the binding constraint — some downstream tests may be premature.",
+      "Heavy reliance on a screenshot (product-products-unwind.png) for several key claims — reviewer cannot verify pixel content, though textual evidence corroborates stockouts and no-reviews indirectly",
+      "Homepage actually carries customer testimonials, so the 'trust thin everywhere' framing slightly overstates; the gap is specifically on PDPs",
+      "Competitor moves are well-chosen but generic at the row level (subscriptions, reviews, gift kits) — transferable but not deeply differentiated per competitor",
+      "Homepage actually carries three testimonials (Max Wical, Diane Mercado, Mariah Acajabon) that exp-2 and exec summary imply don't exist anywhere—proof exists, it's just not on PDPs; framing slightly overstated.",
+      "AggregateRating schema in exp-8 presupposes reviews that exp-2 has yet to create; sequencing dependency not acknowledged."
+    ]
+  }
+}
